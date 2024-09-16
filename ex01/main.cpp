@@ -9,6 +9,11 @@ int main()
 	data.value = 42.42;
 	data.flag = true;
 
+	std::cout << "Deserialized Data contents:" << std::endl;
+	std::cout << "name: " << data.name << std::endl;
+	std::cout << "flag: " << (data.flag ? "true" : "false") << std::endl;
+	std::cout << "value: " << data.value << std::endl;
+
 	std::cout << "Original Data address: " << &data << std::endl;
 
 	uintptr_t raw = Serializer::serialize(&data);

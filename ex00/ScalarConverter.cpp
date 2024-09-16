@@ -1,5 +1,4 @@
 #include "ScalarConverter.hpp"
-#include "utils.hpp"
 #include <string>
 #include <limits>
 #include <cstdlib>
@@ -35,7 +34,7 @@ void ScalarConverter::convert(const std::string& literal) {
         }
     }
 
-    if (std::isnan(value) || std::isinf(value) || value < INT_MIN || value > INT_MAX) {
+    if (std::isnan(value) || std::isinf(value) || value < std::numeric_limits<int>::min() || value > std::numeric_limits<int>::max()) {
         std::cout << "int: impossible" << std::endl;
     } else {
         int i = static_cast<int>(value);

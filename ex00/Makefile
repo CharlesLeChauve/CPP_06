@@ -1,5 +1,5 @@
 NAME	= convert
-SRC		= main.cpp ScalarConverter.cpp utils.cpp
+SRC		= main.cpp ScalarConverter.cpp
 
 OBJ		= $(SRC:.cpp=.o)
 
